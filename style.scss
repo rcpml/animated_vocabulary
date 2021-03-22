@@ -1,0 +1,112 @@
+@import 'colors';
+@import 'mixins';
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    box-sizing: border-box;
+    background-color: $background-color;
+    font-size: 2rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    margin-top: 20vh;
+    padding: 2rem;
+
+    // background-color: salmon;
+
+    @include respond(phone) {
+        margin-top: 10vh;
+        padding: 1rem 5rem;
+        min-height: 30vh;
+    }
+}
+
+.container > *:not(:last-child) {
+    margin-bottom: 2rem;
+}
+
+.word {
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 5rem;
+    text-transform: uppercase;
+
+    color: $black-primary-text;
+
+    @include respond(phone) {
+        font-size: 3rem;
+    }
+}
+
+.definition {
+    font-family: "Montserrat", sans-serif;
+
+    font-family: "Roboto Slab", serif;
+
+    color: $black-primary;
+
+    @include respond(phone) {
+        font-size: 1.5rem;
+    }
+}
+
+.sample {
+    font-family: "Roboto Slab", serif;
+
+    font-family: "Montserrat", sans-serif;
+    font-style: italic;
+
+    color: $black-primary-light;
+
+    @include respond(phone) {
+        font-size: 1.5rem;
+    }
+}
+
+
+.buttons {
+    padding-top: 2vh;
+    padding: 2rem;
+    min-width: 40vw;
+    display: flex;
+    justify-content: space-between;
+
+    // background-color: cornflowerblue;
+
+
+}
+
+.fas {
+    @include respond(phone) {
+        font-size: 1.5rem;
+    }
+}
+
+.fas:hover {
+    cursor: pointer;
+}
+.fa-arrow-left:hover,
+.fa-arrow-right:hover{
+    color: $blue-primary;
+}
+
