@@ -48,13 +48,17 @@
     }
 
     function nextItem() {    
-        if (index < dictionary.length-1) {
-            index++;
-            assignItem(index);
+        fadeOut();
+        setTimeout(() => {
+            if (index < dictionary.length-1) {
+                index++;
+                assignItem(index);
         } else {
             index = 0;
             assignItem(index);
         }
+        }, 1000);
+        fadeIn();
     }
 
     function prevItem() {
@@ -70,13 +74,6 @@
     assignItem(0);
 
 
-
-
-
-
-
-
-
     const animationDuration = 0.35;
     const animationOpacityIn = 0;
     const animationOpacityOut = 0;
@@ -84,22 +81,28 @@
 
     const tl = gsap.timeline();
 
-    function animationFadeIn() {
+    function initialFadeIn() {
         tl.from(wordArea, {duration: animationDuration, opacity: animationOpacityIn, ease: animationEase})
         .from(definitionArea, {duration: animationDuration, opacity: animationOpacityIn, ease: animationEase})
         .from(sampleArea, {duration: animationDuration, opacity: animationOpacityIn, ease: animationEase})
         .from(buttonArea, {duration: animationDuration, opacity: animationOpacityIn, ease: animationEase});
     }
-    animationFadeIn();
+    initialFadeIn();
 
-    function animationFadeOut() {
+    function fadeOut() {
         tl.to(wordArea, {duration: animationDuration, opacity: animationOpacityOut, ease: animationEase})
         .to(definitionArea, {duration: animationDuration, opacity: animationOpacityOut, ease: animationEase})
         .to(sampleArea, {duration: animationDuration, opacity: animationOpacityOut, ease: animationEase})
         .to(buttonArea, {duration: animationDuration, opacity: animationOpacityOut, ease: animationEase});
     }
 
-    // animationFadeOut();
+    function fadeIn() {
+        tl.from(wordArea, {duration: 0.5, opacity: 1, ease: animationEase})
+        .from(definitionArea, {duration: 0.5, opacity: 1, ease: animationEase})
+        .from(sampleArea, {duration: 0.5, opacity: 1, ease: animationEase})
+        .from(buttonArea, {duration: 0.5, opacity: 1, ease: animationEase});
+    }
+
 
 
 })();

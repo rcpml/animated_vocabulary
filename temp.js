@@ -28,4 +28,20 @@ function letterCombinations(digits) {
 
 
 
-console.log(letterCombinations("2"));
+// console.log(letterCombinations("2"));
+
+
+
+function maxSubArr(nums) {
+    let maxSum = 0;
+    let currentSum = 0;
+
+    for (let number of nums) {
+        currentSum = Math.max(0, (currentSum + number));
+        maxSum = Math.max(maxSum, currentSum);
+    }
+
+    return maxSum;
+}
+
+// console.log(maxSubArr([2, -3, 2, 2, -2, 10]));
