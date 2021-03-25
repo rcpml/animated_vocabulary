@@ -119,8 +119,10 @@ body {
   cursor: pointer;
 }
 
-.fa-arrow-circle-left:hover,
-.fa-arrow-circle-right:hover {
-  color: #02b8d8;
+@media (hover: hover) {
+  .fa-arrow-circle-left:hover,
+  .fa-arrow-circle-right:hover {
+    color: #02b8d8;
+  }
 }
 /*# sourceMappingURL=style.css.map */

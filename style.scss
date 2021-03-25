@@ -101,8 +101,15 @@ body {
 .fas:hover {
     cursor: pointer;
 }
-.fa-arrow-circle-left:hover,
-.fa-arrow-circle-right:hover{
-    color: $blue-primary;
-}
+// .fa-arrow-circle-left:hover,
+// .fa-arrow-circle-right:hover{
+//     color: $blue-primary;
+// }
 
+@media (hover: hover) {
+    .fa-arrow-circle-left:hover,
+    .fa-arrow-circle-right:hover {
+    color: $blue-primary;
+    }
+  }
+  
