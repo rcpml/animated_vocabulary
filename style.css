@@ -37,6 +37,7 @@ body {
 .container {
   margin-top: 20vh;
   padding: 2rem;
+  max-width: 50vw;
 }
 
 @media (max-width: 600px) {
@@ -44,6 +45,7 @@ body {
     margin-top: 10vh;
     padding: 1rem 5rem;
     min-height: 30vh;
+    max-width: 200%;
   }
 }
 
@@ -56,6 +58,8 @@ body {
   font-size: 5rem;
   text-transform: uppercase;
   color: #404040;
+  color: #df3030;
+  opacity: 1;
 }
 
 @media (max-width: 600px) {
@@ -65,9 +69,9 @@ body {
 }
 
 .definition {
-  font-family: "Montserrat", sans-serif;
   font-family: "Roboto Slab", serif;
   color: #121212;
+  opacity: 0.8;
 }
 
 @media (max-width: 600px) {
@@ -77,10 +81,10 @@ body {
 }
 
 .sample {
-  font-family: "Roboto Slab", serif;
   font-family: "Montserrat", sans-serif;
   font-style: italic;
   color: #534e50;
+  opacity: 0.9;
 }
 
 @media (max-width: 600px) {
@@ -96,14 +100,18 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  font-size: 4rem;
+}
+
+.buttons > * + * {
+  margin-left: 10rem;
 }
 
 @media (max-width: 600px) {
   .fas {
-    font-size: 1.5rem;
+    font-size: 2.5rem;
   }
 }
 
@@ -111,8 +119,8 @@ body {
   cursor: pointer;
 }
 
-.fa-arrow-left:hover,
-.fa-arrow-right:hover {
+.fa-arrow-circle-left:hover,
+.fa-arrow-circle-right:hover {
   color: #02b8d8;
 }
 /*# sourceMappingURL=style.css.map */

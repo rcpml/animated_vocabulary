@@ -21,23 +21,24 @@ body {
     box-sizing: border-box;
     background-color: $background-color;
     font-size: 2rem;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    // background-color: azure;
 }
 
 .container {
     margin-top: 20vh;
     padding: 2rem;
-
-    // background-color: salmon;
+    max-width: 50vw;
 
     @include respond(phone) {
         margin-top: 10vh;
         padding: 1rem 5rem;
         min-height: 30vh;
+        max-width: 200%;
     }
 }
 
@@ -46,42 +47,34 @@ body {
 }
 
 .word {
-
     font-family: "Montserrat", sans-serif;
     font-size: 5rem;
     text-transform: uppercase;
-
     color: $black-primary-text;
-
-
+    color: #df3030;
     @include respond(phone) {
         font-size: 3rem;
     }
+    opacity: 1;
 }
 
 .definition {
-    font-family: "Montserrat", sans-serif;
-
     font-family: "Roboto Slab", serif;
-
     color: $black-primary;
-
     @include respond(phone) {
         font-size: 1.5rem;
     }
+    opacity: 0.8;
 }
 
 .sample {
-    font-family: "Roboto Slab", serif;
-
     font-family: "Montserrat", sans-serif;
     font-style: italic;
-
     color: $black-primary-light;
-
     @include respond(phone) {
         font-size: 1.5rem;
     }
+    opacity: 0.9;
 }
 
 
@@ -90,24 +83,26 @@ body {
     padding: 2rem;
     min-width: 40vw;
     display: flex;
-    justify-content: space-between;
-
+    justify-content: space-around;
+    font-size: 4rem;
     // background-color: cornflowerblue;
+}
 
-
+.buttons > * + * {
+    margin-left: 10rem;
 }
 
 .fas {
     @include respond(phone) {
-        font-size: 1.5rem;
+        font-size: 2.5rem;
     }
 }
 
 .fas:hover {
     cursor: pointer;
 }
-.fa-arrow-left:hover,
-.fa-arrow-right:hover{
+.fa-arrow-circle-left:hover,
+.fa-arrow-circle-right:hover{
     color: $blue-primary;
 }
 
